@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 - Sin Conexión</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-image: url('./img/error404.png');  /* Adjusted for GitHub Pages */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function checkConnection() {
+            if (navigator.onLine) {
+                window.history.back();
+            }
+        }
+        setInterval(checkConnection, 3000);
+    </script>
+</body>
+</html>
